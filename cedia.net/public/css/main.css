@@ -1,0 +1,203 @@
+  body{
+    background-color: #55bafd !important;
+  }
+
+  nav {
+    background-color: #ffffffc9;
+    color: #0096fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    border-radius: 0 40px 40px 0;
+    z-index: 999;
+  }
+  
+  nav > .logo > h3 > a{
+    color: #0096fa  ;
+    text-decoration: none;
+    transition: .5s;
+  }
+  nav > .logo > h3 > a:hover{
+    color: #55bafd;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0px !important;
+    top: 0px !important;
+    height: 100%;
+  }
+  
+  nav ul li {
+    padding-inline: 30px;
+    position: relative;
+
+  }
+  
+  nav ul li a {
+    color: #0096fa;
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    color: #0096fa;
+  }
+  .dropdown {
+    position: relative;
+    transition: .5s;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: -17px;
+    background-color: #0096fa;
+    min-width: 160px;
+    display: none;
+    transition: 0.5s;
+  }
+
+  .dropdown-content > .item > a{
+    color: #fff;
+  }
+
+  .dropdown-content > .item > a:hover{
+    color: #fff;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .drodown-activator{
+    cursor: pointer;
+  }
+  
+  .home{
+    background-color: #0096fa;
+    transition: .5s;
+  }
+  .home:hover{
+    background-color: #55bafd;
+  }
+
+
+  .home > a{
+    color: #fff;
+  }
+
+  .home > a:hover{
+    color: #fff;
+  }
+
+  .item{
+    padding: 10px;
+    transition: .5s;
+  }
+  
+  .item:hover{
+    background-color: #55bafd;
+  }
+  
+  .banner-home-1{
+    height: 600px;
+    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/banner-home.jpg') center center no-repeat ;
+    background-size: cover;
+  }
+
+  .banner-home-2{
+    height: 600px;
+    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/banner-home.jpg') center center no-repeat ;
+    background-size: cover;
+  }
+
+  .banner-home-3{
+    height: 600px;
+    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/banner-home.jpg') center center no-repeat ;
+    background-size: cover;
+  }
+
+  .profesionales-container{
+    background-color: #55bafd;
+    color: #fff;
+  }
+
+  .profesionales-titulo{
+    position: relative;
+  }
+
+  .profesionales-titulo::after{
+    width: 140%;
+    height: 3px;
+    background-color: #fff;
+    content: " ";
+    position: absolute;
+    top: -50px;
+    left: 0%;
+  }
+  .perfil-info{
+    color: #55bafd;
+  }
+
+  .list-style-none{
+    list-style: none;
+  }
+
+  .w-90{
+    width: 90%;
+  }
+
+  .w-80{
+    width: 80%;
+  }
+  
+  .w-40{
+    width: 40%;
+  }
+
+  .w-30{
+    width: 30%;
+  }
+
+  .ms-10{
+    margin-left: 10%;
+  }
+
+  .me-10{
+    margin-right: 10%;
+  }
+  
+  .carousel-banner{
+    position: relative;
+  }
+  
+  .carousel-fade::after{
+    width: 100%;
+    position: absolute;
+    content: 'C E D I A M E D I C A L';
+    color: #fff;
+    font-size: 42px;
+    font-weight: bolder;
+    text-align: center;
+    bottom: 260px;
+    z-index: 2;
+  }
+
+  .home-options{
+    position: relative;
+    height: 200px;
+    background-color: #55bafd;
+  }
+
+  .item-container{
+    position: absolute;
+    top: -50px;
+    height: 200px;
+    z-index: 3;
+  }
+  .home-item{
+    height: 200px;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.185)
+  }
