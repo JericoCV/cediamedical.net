@@ -26,7 +26,7 @@ CEDIAMEDICAL
     <div class="home-options w-80 m-auto ">
         <div class="item-container w-100 d-flex">
             <div class="home-item rounded w-30 bg-light m-auto d-flex">
-                <a class="d-flex w-100" href=""><img class="w-80 self-justify-center m-auto" src="{{asset('images/cmlatino.png')}}" alt=""></a>
+                <a class="d-flex w-100" href="{{route('centromedico')}}"><img class="w-80 self-justify-center m-auto" src="{{asset('images/cmlatino.png')}}" alt=""></a>
             </div>
             <div class="home-item rounded w-30 bg-light m-auto">
                 <a href="">Medimagen</a>
@@ -44,57 +44,42 @@ CEDIAMEDICAL
         <div class="profesionales-perfil w-40 m-auto rounded bg-white">
             <div id="carouselExampleControls" class="carousel carousel-dark slide p-5" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="d-flex">
-                        <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
-                            <img class="rounded w-100 m-auto" src="{{asset('images/doctor-profile-photo.jpg')}}" alt="">
-                        </div>
-                        <div class="perfil-info w-40 d-flex me-10">
-                            <ul class="list-style-none text-center ps-0 m-auto">
-                                <li>
-                                    <h3>Nombre y Apellido</h3>
-                                </li>
-                                <li>
-                                    <p>Especializacion</p>
-                                </li>
-                            </ul>
+                    <div class="carousel-item active">
+                        <div class="d-flex">
+                            <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
+                                <img class="rounded w-100 m-auto" src="{{asset($medicos[0]->foto)}}" alt="">
+                            </div>
+                            <div class="perfil-info w-40 d-flex me-10">
+                                <ul class="list-style-none text-center ps-0 m-auto">
+                                    <li>
+                                        <h3>{{$medicos[0]->nombre}} {{$medicos[0]->apellidos}}</h3>
+                                    </li>
+                                    <li>
+                                        <p>{{$medicos[0]->especialidad}}</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="d-flex">
-                        <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
-                            <img class="rounded w-100 m-auto" src="{{asset('images/doctor-profile-photo.jpg')}}" alt="">
-                        </div>
-                        <div class="perfil-info w-40 d-flex me-10">
-                            <ul class="list-style-none text-center ps-0 m-auto">
-                                <li>
-                                    <h3>Nombre y Apellido 2</h3>
-                                </li>
-                                <li>
-                                    <p>Especializacion</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>                   
-                  </div>
-                  <div class="carousel-item">
-                    <div class="d-flex">
-                        <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
-                            <img class="rounded w-100 m-auto" src="{{asset('images/doctor-profile-photo.jpg')}}" alt="">
-                        </div>
-                        <div class="perfil-info w-40 d-flex me-10">
-                            <ul class="list-style-none text-center ps-0 m-auto">
-                                <li>
-                                    <h3>Nombre y Apellido 3</h3>
-                                </li>
-                                <li>
-                                    <p>Especializacion</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>   
-                  </div>
+                  @for($i = 1; $i < count($medicos); $i++)
+                    <div class="carousel-item">
+                        <div class="d-flex">
+                            <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
+                                <img class="rounded w-100 m-auto" src="{{asset($medicos[$i]->foto)}}" alt="">
+                            </div>
+                            <div class="perfil-info w-40 d-flex me-10">
+                                <ul class="list-style-none text-center ps-0 m-auto">
+                                    <li>
+                                        <h3>{{$medicos[$i]->nombre}} {{$medicos[$i]->apellidos}}</h3>
+                                    </li>
+                                    <li>
+                                        <p>{{$medicos[$i]->especialidad}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                   
+                    </div>
+                  @endfor
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>

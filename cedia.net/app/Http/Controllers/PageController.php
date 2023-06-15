@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\MedicoController;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function __invoke()
     {
-        return view('home');
+        $medicos = MedicoController::show();
+        return view('home')->with(compact('medicos'));
     }
 
     public function mision(){
@@ -53,6 +55,14 @@ class PageController extends Controller
         return view('signup');
     }
     public function AdminHome(){
-        return view('AdminHome');
+        $consultas = ConsultaController::show();
+        return view('AdminHome')->with(compact('consultas'));
+    }
+    public function AdminProfesionals(){
+        $medicos = MedicoController::show();
+        return view('AdminProfesionals')->with(compact('medicos'));
+    }
+    public function AdminSettings(){
+        return view('AdminSettings');
     }
 }

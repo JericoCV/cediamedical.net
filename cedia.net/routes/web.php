@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\MedicoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +30,14 @@ Route::get('/salud',[pageController::class,'salud'])->name('salud');
 Route::get('/contactenos',[pageController::class,'contactenos'])->name('contactenos');
 Route::get('/cediatemporalsignup',[pageController::class,'signup'])->name('signup');
 Route::get('/CediaAdminHome',[pageController::class,'AdminHome'])->name('AdminHome');
+Route::get('/CediaAdminProfesionals',[pageController::class,'AdminProfesionals'])->name('AdminProfesionals');
+Route::get('/CediaAdminSettings',[pageController::class,'AdminSettings'])->name('AdminSettings');
 
 Route::post('login',[UserController::class,'login'])->name('login');
 Route::post('logout',[UserController::class,'logout'])->name('logout');
 Route::post('signup',[UserController::class,'signup'])->name('signup');
+Route::post('consultas',[ConsultaController::class,'store'])->name('consulta.store');
+Route::post('consulta/update',[ConsultaController::class,'update'])->name('update-consulta');
+Route::post('profesionales',[MedicoController::class,'create'])->name('profesionales-create');
+Route::post('profesionales/update',[MedicoController::class,'update'])->name('profesionales-update');
+Route::post('profesionales/delete',[MedicoController::class,'delete'])->name('profesionales-delete');

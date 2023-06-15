@@ -2,7 +2,7 @@
     background-color: #55bafd !important;
   }
 
-  nav {
+  .nav {
     background-color: #ffffffc9;
     color: #0096fa;
     display: flex;
@@ -14,16 +14,16 @@
     z-index: 999;
   }
   
-  nav > .logo > h3 > a{
+  .nav > .logo > h3 > a{
     color: #0096fa  ;
     text-decoration: none;
     transition: .5s;
   }
-  nav > .logo > h3 > a:hover{
+  .nav > .logo > h3 > a:hover{
     color: #55bafd;
   }
 
-  nav ul {
+  .nav > ul {
     list-style: none;
     display: flex;
     margin-bottom: 0px !important;
@@ -31,17 +31,17 @@
     height: 100%;
   }
   
-  nav ul li {
+  .nav > ul > li {
     padding-inline: 30px;
     position: relative;
 
   }
   
-  nav ul li a {
+  .nav > ul > li > a {
     color: #0096fa;
     text-decoration: none;
   }
-  nav ul li a:hover{
+  .nav > ul > li > a:hover{
     color: #0096fa;
   }
   .dropdown {
@@ -97,6 +97,10 @@
     transition: .5s;
   }
   
+  .item > a{
+    text-decoration: none;
+  }
+  
   .item:hover{
     background-color: #55bafd;
   }
@@ -150,7 +154,7 @@
   }
 
   .w-80{
-    width: 80%;
+    width: 80% !important;
   }
   
   .w-40{

@@ -1,4 +1,4 @@
-<nav>
+<nav class="nav">
     <div class="logo">
         <h3 class="ps-3 m-0"><a href="{{route('home')}}">
             CEDIAMEDICAL
@@ -6,7 +6,7 @@
     </div>
     
     <ul class="pe-3">
-      <li class="home pt-4 rounded-bottom"><a href="{{route('home')}}">HOME</a></li>
+      <li class="home pt-4 rounded-bottom"><a href="{{route('home')}}" class="text-light">INICIO</a></li>
       <li class="dropdown pt-4">
         <p class="drodown-activator">NOSOTROS</p>
         <div class="dropdown-content rounded">

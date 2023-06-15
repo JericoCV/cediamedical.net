@@ -28,7 +28,7 @@ Contáctenos
         <div class="contact-form w-50 ps-4">
             <h2>Contáctenos</h2>
             <p>Nuestros ejecutivos especializados atenderán tus dudas, recibirán tus comentarios y te brindarán el servicio que requieras</p>
-            <form action="{{-- {{route('consulta.store')}} --}}" method="POST">
+            <form action="{{route('consulta.store')}}" method="POST">
                 @csrf
                 <input type="text" name="nombre_apellido" placeholder="Nombres y Apellidos*">
                 <input type="text" name="email" placeholder="Correo Electrónico*">
