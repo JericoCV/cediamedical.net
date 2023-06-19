@@ -11,4 +11,27 @@
      @yield('content')  
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
+<style>
+    @media (max-width: 600px){
+        .carousel-fade::after{
+            content: 'CEDIAMEDICAL' !important;
+        }
+    }
+    @media (max-width: 800px){
+        .info-container{
+            display: block !important;
+            align-content: center !important
+        }
+        .info-container>.w-25{
+            width: 50% !important;
+            margin: auto !important;
+        }
+        .info-container>.w-75{
+            margin: auto !important;
+            padding-left: 0px !important;
+            padding-top: 10px !important;
+            margin-top: 30px !important;
+        }
+    }
+</style>
 </html>

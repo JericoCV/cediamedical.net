@@ -45,7 +45,7 @@ CEDIAMEDICAL
             <div id="carouselExampleControls" class="carousel carousel-dark slide p-5" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="d-flex">
+                        <div class="d-flex d-perfil">
                             <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
                                 <img class="rounded w-100 m-auto" src="{{asset($medicos[0]->foto)}}" alt="">
                             </div>
@@ -63,14 +63,14 @@ CEDIAMEDICAL
                     </div>
                   @for($i = 1; $i < count($medicos); $i++)
                     <div class="carousel-item">
-                        <div class="d-flex">
+                        <div class="d-flex d-perfil">
                             <div class="perfil-photo m-auto w-40 rounded d-flex ms-10">
                                 <img class="rounded w-100 m-auto" src="{{asset($medicos[$i]->foto)}}" alt="">
                             </div>
                             <div class="perfil-info w-40 d-flex me-10">
                                 <ul class="list-style-none text-center ps-0 m-auto">
                                     <li>
-                                        <h3>{{$medicos[$i]->nombre}} {{$medicos[$i]->apellidos}}</h3>
+                                        <h3>{{$medicos[$i]->nombre}}<br>{{$medicos[$i]->apellidos}}</h3>
                                     </li>
                                     <li>
                                         <p>{{$medicos[$i]->especialidad}}</p>
@@ -93,5 +93,60 @@ CEDIAMEDICAL
         </div>
     </div>
    @include('layouts.html-footer') 
+   <style>
+    @media (max-width: 1000px){
+        .w-40{
+            width: 45% !important;
+        }
+    }
+    @media (max-width: 800px){
+        .profesionales-container{
+            display: block !important;
+        }
+        .profesionales-titulo::after{
+            display: none;
+        }
+        .w-40{
+            width: 70% !important;
+        }
+    }
+    @media (max-width: 800px){
+        .d-perfil{
+            display: block !important;
+            text-align: center !important;
+        }
+        .perfil-info{
+            /* margin-right: -10% !important; */
+            margin: auto !important;
+        }
+        .perfil-info>h3{
+            font-size: 16px !important;
+        }
+        .perfil-info>ul{
+            width: 100% !important;
+            align-self: center !important;
+        }
+    }
+    @media (max-width: 600px){
+        .carousel-fade::after{
+            content: 'CEDIAMEDICAL' !important;
+        }
+        .home-options{
+            height: auto !important
+        }
+        .item-container{
+            display: block !important;
+            position: relative !important;
+            height: auto !important
+        }
+        .home-item{
+            margin-bottom: 10px !important;
+            height: auto !important;
+        }
+        .w-30{
+            width: 80% !important
+        }
+    }
+   </style>
 @endsection
 

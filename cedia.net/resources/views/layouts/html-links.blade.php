@@ -1,4 +1,4 @@
-<div class="links-container d-flex">
+<div class="links-container d-flex rounded">
     <ul>
         <li>
             <a href=""><img src="{{asset('images/fb.svg')}}" alt="" title="Facebook"></a>
@@ -41,5 +41,15 @@
     }
     .links-container>ul>li>a>img:hover{
         width: 50px !important;
+    }
+    @media (max-width: 600px){
+        .links-container{
+            background: #013e685e !important;
+            left: 0px !important;
+            top: 90px !important
+        }
+        .links-container>ul{
+            padding-left:0px !important;
+        }
     }
 </style>
