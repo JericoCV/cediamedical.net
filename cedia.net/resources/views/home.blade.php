@@ -23,16 +23,16 @@ CEDIAMEDICAL
             </div>
         </div>
     </div>  
-    <div class="home-options w-80 m-auto ">
+    <div class="home-options w-80 m-auto">
         <div class="item-container w-100 d-flex">
             <div class="home-item rounded w-30 bg-light m-auto d-flex">
                 <a class="d-flex w-100" href="{{route('centromedico')}}"><img class="w-80 self-justify-center m-auto" src="{{asset('images/cmlatino.png')}}" alt=""></a>
             </div>
             <div class="home-item rounded w-30 bg-light m-auto">
-                <a href="">Medimagen</a>
+                <a class="d-flex w-100" href="{{route('medimagen')}}"><img class="w-80 self-justify-center m-auto" src="{{asset('images/medimagen.png')}}" alt=""></a>
             </div>
             <div class="home-item rounded w-30 bg-light m-auto">
-                <a href="">Alerta Huánuco</a>
+                <a class="d-flex w-100" href="{{route('alerta')}}"><img class="w-80 self-justify-center m-auto" src="{{asset('images/alerta.png')}}" alt=""></a>
             </div>
         </div>    
     </div>

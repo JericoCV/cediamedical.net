@@ -113,13 +113,13 @@
 
   .banner-home-2{
     height: 600px;
-    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/banner-home.jpg') center center no-repeat ;
+    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/recepcionfrontal.jpg') center center no-repeat ;
     background-size: cover;
   }
 
   .banner-home-3{
     height: 600px;
-    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/banner-home.jpg') center center no-repeat ;
+    background: linear-gradient(to bottom,#ffffff3a,#55bafd),url('../images/cediamedicalmuro.jpg') center center no-repeat ;
     background-size: cover;
   }
 
