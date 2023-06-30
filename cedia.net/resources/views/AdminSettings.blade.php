@@ -27,7 +27,12 @@ HOME+
     </div>
     <div class="admin-lista w-75 bg-white pb-3 rounded-top">
         @include('layouts.html-logout')
-        
+        <div class="form-group">
+            <div class="nothing-here text-center w-50 m-auto">
+                <img class="w-80 m-auto" src="{{asset('images/undraw_void.svg')}}" alt="">
+                <h2>Aun no hay nada por aqui</h2>
+            </div>
+        </div>
     </div>
 </div>
 @include('layouts.html-footer')
